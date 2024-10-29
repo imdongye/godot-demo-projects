@@ -81,8 +81,8 @@ func _gui_input(event: InputEvent) -> void:
 				curr_state[event.index] = event.position
 
 				# Compute base and current inter-finger vectors.
-				var base_segment: Vector3 = base_state[base_state.keys()[0]] - base_state[base_state.keys()[1]]
-				var new_segment: Vector3 = curr_state[curr_state.keys()[0]] - curr_state[curr_state.keys()[1]]
+				var base_segment: Vector2 = base_state[base_state.keys()[0]] - base_state[base_state.keys()[1]]
+				var new_segment: Vector2 = curr_state[curr_state.keys()[0]] - curr_state[curr_state.keys()[1]]
 
 				# Get the base scale from the base matrix.
 				var base_scale := Vector3(base_xform.basis.x.x, base_xform.basis.y.y, base_xform.basis.z.z).length()
